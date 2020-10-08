@@ -4,7 +4,7 @@ import datetime as dt
 import time
 
 # Получаем адрес до папки с файлами
-path_to_files = str(input('Path to files: ') or str(r'C:\Users\andrei.agasiants\OneDrive - Unilever\Desktop\New folder\New folder'))
+path_to_files = str(input('Path to files: '))
 path_to_files = os.path.normpath(path_to_files)
 
 start_time = time.time()
