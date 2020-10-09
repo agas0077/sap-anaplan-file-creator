@@ -65,6 +65,8 @@ for index, file in enumerate(files_list):
 main_df.reset_index(inplace=True, drop=True)
 # Делаем так, чтобы индексы начинались с 1
 main_df.index += 1
+# Меняем заголовки столбцов
+main_df.columns = header
 # Сохраняем фрейм в txt файл с табуляциями в качестве разделитеоей
 main_df.to_csv(os.path.join(path_to_files, 'res.txt'), mode='w', sep='\t', index_label=index_name)
 
