@@ -63,6 +63,10 @@ for index, file in enumerate(files_list):
 
 # Пересчитываем индексы
 main_df.reset_index(inplace=True, drop=True)
+
+# Заглушка для проблемы с 0.0
+main_df = main_df.astype({'Billed Quantity': float}).astype({'Billed Quantity': int})
+
 # Делаем так, чтобы индексы начинались с 1
 main_df.index += 1
 # Меняем заголовки столбцов
